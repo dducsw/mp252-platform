@@ -28,5 +28,8 @@ def create_table(spark: SparkSession) -> None:
     )
 
 if __name__ == "__main__":
+    
+    
     spark = SparkSession.builder.appName("SparkSessionExample").getOrCreate()
+    spark.sparkContext.setLogLevel("ERROR")
     create_table(spark)
